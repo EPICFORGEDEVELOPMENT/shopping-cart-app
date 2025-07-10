@@ -1,0 +1,92 @@
+.card {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  transform: translateY(-4px) scale(1.02);
+}
+.cardImage {
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  background: #f8fafc;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #22223b;
+  min-height: 2.5em;
+}
+.cardDesc {
+  color: #6c757d;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  flex: 1 1 auto;
+  min-height: 3.5em;
+  max-height: 4.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  position: relative;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s;
+  cursor: pointer;
+}
+.cardDesc:hover {
+  max-height: 300px;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  background: #f8fafc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+.cardDescInner {
+  display: block;
+  white-space: pre-line;
+  padding-right: 0;
+  transition: none;
+}
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+.cardPrice {
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.addToCartBtn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(37, 99, 235, 0.08);
+  margin-left: 1rem;
+}
+.addToCartBtn:disabled {
+  background: #a5b4fc;
+  color: #fff;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.addToCartBtn:not(:disabled):hover {
+  background: #1d4ed8;
+}
